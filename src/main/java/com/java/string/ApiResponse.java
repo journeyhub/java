@@ -1,8 +1,11 @@
 package com.java.string;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.Getter;
+
 import java.util.List;
 
+@Getter
 public class ApiResponse {
     @JsonProperty("result")
     private Result result;
@@ -10,7 +13,8 @@ public class ApiResponse {
     public Result getResult() {
         return result;
     }
-
+    
+    @Getter
     public static class Result {
         @JsonProperty("input")
         private Input input;
